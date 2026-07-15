@@ -41,6 +41,19 @@ pyinstaller --onefile --windowed --name MarkItSwift ^
 
 > หมายเหตุ: ไฟล์เสียง (mp3/wav) ต้องมี `ffmpeg` ในเครื่องจึงจะถอดเสียงได้; ฟีเจอร์อื่นไม่ต้องใช้
 
+## Build อัตโนมัติ (GitHub Actions)
+
+ทุกครั้งที่ push ขึ้น `main` ระบบจะ build `.exe` บน Windows ให้อัตโนมัติ — ดาวน์โหลดได้จากแท็บ **Actions › (run ล่าสุด) › Artifacts**
+
+**ออก Release พร้อมไฟล์ .exe** — สร้าง tag ที่ขึ้นต้นด้วย `v`:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+Workflow จะ build แล้วแนบ `MarkItSwift.exe` เข้ากับ GitHub Release ให้เอง
+
 ## สร้างไอคอนใหม่ (ถ้าต้องการ)
 
 ```bash
