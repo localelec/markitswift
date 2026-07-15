@@ -14,6 +14,7 @@ pyinstaller --noconfirm --onefile --windowed ^
   --add-data "app.ico;." ^
   --collect-all customtkinter ^
   --collect-all markitdown ^
+  --collect-all magika ^
   --collect-all tkinterdnd2 ^
   markitdown_ui.py
 
